@@ -1,0 +1,8 @@
+<!-- Code taken and modified by cwl from Kieran Dunbar's assignment solution 2016-17 -->
+<div id="notification_feed">
+  <% if @notifications.length > 0 %>
+      <% @notifications.each do |notification| %>
+          <%= render partial: 'notifications/notification', locals: {notification: notification} %>
+      <% end %>
+  <% end %>
+</div>

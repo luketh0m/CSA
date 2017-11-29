@@ -1,0 +1,58 @@
+<!-- Note how we have to make the form multi-part for image
+     uploading to work -->
+<%= form_for(user, html: {multipart: true}) do |f| %>
+    <% if user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= hidden_field_tag 'page', @current_page %>
+
+    <div class="field">
+      <%= f.label :surname %><br>
+      <%= f.text_field :surname %>
+    </div>
+    <div class="field">
+      <%= f.label :firstname %><br>
+      <%= f.text_field :firstname %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.phone_field :phone %>
+    </div>
+    <div class="field">
+      <%= f.label :grad_year %><br>
+      <%= f.number_field :grad_year %>
+    </div>
+    <div class="field">
+      <%= f.label :jobs %><br>
+      <%= f.check_box :jobs %>
+    </div>
+    <!-- Here's the part that allows us to upload
+       a file. We don't want this to be part of
+       the user object but rather a separate parameter
+       in the params hash, called :image_file rather than
+       part of params :user sub-hash -->
+    <div class="field">
+      <%= f.label :user, 'Image' %><br/>
+      <%= file_field_tag :image_file %><br/>
+      <span class='hint'>
+      (We accept JPEG, GIF, or PNG files)
+    </span>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.email_field :email %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

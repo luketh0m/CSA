@@ -1,0 +1,67 @@
+// Taken from Kieran Dunbar's assignment 2016-17
+#notification_feed {
+  float: right;
+  height: 400px;
+  width: 350px;
+  border: 1px solid #bbb;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #000;
+  font-size: 14px;
+
+  .clear {
+    clear: both;
+  }
+
+  .notification {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+
+    .left {
+      float: left;
+      width: 50px;
+    }
+
+    .right {
+      float: right;
+      width: 265px;
+      margin-top: 3px;
+
+      .user {
+        float: left;
+        font-weight: bold;
+        margin-bottom: 9px;
+        color: #000;
+
+        a {
+          color: #000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .timestamp {
+        float: right;
+        color: #777;
+        font-style: italic;
+
+        a {
+          color: #777;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .content {
+        clear: both;
+        font-size: 16px;
+      }
+    }
+  }
+}

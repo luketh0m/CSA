@@ -1,0 +1,19 @@
+<div class="notification">
+  <div class="left">
+    <%= image_for(notification.user, :small, true) %>
+  </div>
+  <div class="right">
+    <div class="user">
+      <a href="<%= user_path(notification.user.id) %>">
+        <%= notification.user.firstname %> <%= notification.user.surname %>
+      </a>
+    </div>
+    <div class="timestamp">
+      <a href="<%= broadcast_path(notification.id) %>">
+        <%= notification.created_at.strftime("%d/%m/%y %H:%M:%S") %>
+      </a>
+    </div>
+    <div class="content"><%= notification.content %></div>
+  </div>
+  <br style="clear: both"/>
+</div>

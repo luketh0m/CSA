@@ -1,0 +1,18 @@
+I"Ë(function() {
+  App.notificationsChannel = App.cable.subscriptions.create({
+    channel: "NotificationsChannel"
+  }, {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      var newNotificationElem;
+      newNotificationElem = data;
+      $("#notification_feed").prepend(newNotificationElem);
+      return App.notificationsChannel.send({
+        received: navigator.userAgent
+      });
+    }
+  });
+
+}).call(this);
+:ET
