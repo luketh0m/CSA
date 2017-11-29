@@ -19,4 +19,17 @@
   <%= link_to 'Edit', edit_post_path(@post) %>
 <% end %>
 
+<% if @post.comments %>
+  <% for comment in @post.comments %>    
+    <p>
+      <strong>Comments:</strong>
+      <%= comment.title %>
+    </p>
+   <br>
+  <% end %>
+<% end %> 
+
+
+<%= render 'comment', post: @post %>
+
 <%= link_to 'Back', posts_path %>
