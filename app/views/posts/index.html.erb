@@ -7,9 +7,9 @@
     <tr>
       <th>Title</th>
       <th>Author</th>
-      <th>Subject</th>
-
-      <th colspan="3"></th>
+      <th>Unread posts</th>
+      <th>Total number posts</th>
+    
     </tr>
   </thead>
 
@@ -19,17 +19,15 @@
       <tr>
           <td><%= link_to post.title, post%></td>
           <td><%= post.author %></td>
-          <td><%= post.subject %></td>
+          <td></td>
+          <td></td>
 
-          <% if is_admin? || post.author == current_user.login %>
-            <td><%= link_to 'Edit', edit_post_path(post) %></td>
-            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
         </tr>
         <% end %>
      <% end %>
      </tbody>
      </table>
-<br>
+
+  <br>
 
 <%= link_to 'Create Thread', new_post_path %>

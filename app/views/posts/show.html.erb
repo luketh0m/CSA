@@ -15,10 +15,11 @@
   <strong>Subject:</strong>
   <%= @post.subject %>
 </p>
-<% if is_admin? || @post.author == current_user.login %>
-  <%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>
 
+<% if is_admin? || @post.author == current_user.login %>
+    <td><%= link_to 'Edit', edit_post_path(@post) %></td>
+    <td><%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
 
 
 

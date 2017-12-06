@@ -12406,3 +12406,511 @@ Can't verify CSRF token authenticity.
 Completed 201 Created in 48ms (Views: 5.8ms | ActiveRecord: 14.8ms)
 
 
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:42:15 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:42:15 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Started GET "/" for 127.0.0.1 at 2017-12-06 15:42:54 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (15.4ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (28.8ms)
+Completed 200 OK in 472ms (Views: 423.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:42:55 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:42:55 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:42:57 +0000
+NotificationsChannel stopped streaming from notifications
+Started DELETE "/session" for 127.0.0.1 at 2017-12-06 15:42:57 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bIhBFdNWqUo/hRlLQPAf4q4fVyUo4SQTTG4rH4t58SkzxvYRHBmmGph3sLqz42gDIs9wHotDu28Djm5Uo6VHDw=="}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-12-06 15:42:57 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered sessions/_login.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:42:57 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:42:57 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:04 +0000
+NotificationsChannel stopped streaming from notifications
+Started GET "/session/new" for 127.0.0.1 at 2017-12-06 15:43:04 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered sessions/_login.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:43:04 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:04 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:06 +0000
+NotificationsChannel stopped streaming from notifications
+Started POST "/session" for 127.0.0.1 at 2017-12-06 15:43:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ee5wlVxZCZIPHgbEAirh3FkN7rOOV1o69gPujJx86o4moMeRkxYGwqjsrzXxOZY91d3JiC31xUa546vHtKBcqA==", "login"=>"admin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."login" = ? LIMIT ?[0m  [["login", "admin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-12-06 15:43:06 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.8ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (2.4ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:43:07 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:07 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:12 +0000
+NotificationsChannel stopped streaming from notifications
+Started DELETE "/session" for 127.0.0.1 at 2017-12-06 15:43:12 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EUcMnyHa+flbefTt7YLv0jxjSaOowZrfyNAzYJyFjt9OCbub7pX2qfyLXRwekZgzsLNumAtjBaOHMHYrtFk4+Q=="}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-12-06 15:43:12 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered sessions/_login.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:43:13 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:13 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:16 +0000
+NotificationsChannel stopped streaming from notifications
+Started GET "/session/new" for 127.0.0.1 at 2017-12-06 15:43:16 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered sessions/_login.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:43:17 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:43:17 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:47:41 +0000
+NotificationsChannel stopped streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:48:23 +0000
+NotificationsChannel stopped streaming from notifications
+Started DELETE "/session" for 127.0.0.1 at 2017-12-06 15:48:23 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bVYK96VTdsXxUp5/nRBGY05VbDPJ7Ytcx+shUmB7eDvzxAge4Rpp6qm7y4q6CwG/PTzF0ekue7Xsz9kv6ORWxQ=="}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-12-06 15:48:23 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered sessions/_login.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:48:23 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:48:23 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:48:24 +0000
+NotificationsChannel stopped streaming from notifications
+Started GET "/session/new" for 127.0.0.1 at 2017-12-06 15:48:24 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered sessions/_login.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:48:24 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:48:24 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:50:17 +0000
+NotificationsChannel stopped streaming from notifications
+Started POST "/session" for 127.0.0.1 at 2017-12-06 15:50:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5vjQJLQls2PIJ5QFSEU4F8oNUYkiMPbtxQ8tglgxDnC5tmcge2q8M2/VPfS7Vk/2Rt12soGSaZGK72jJcO24Vg==", "login"=>"admin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."login" = ? LIMIT ?[0m  [["login", "admin"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-12-06 15:50:17 +0000
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.8ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (2.1ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 15:50:18 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 15:50:18 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Started GET "/posts" for 127.0.0.1 at 2017-12-06 15:50:21 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (18.7ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.8ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (1.8ms)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-12-06 15:52:14 +0000
+Processing by PostsController#new as HTML
+  [1m[36mUserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (10.4ms)
+  Rendered posts/new.html.erb within layouts/application (12.3ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.6ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.1ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (2.5ms)
+Completed 200 OK in 96ms (Views: 93.5ms | ActiveRecord: 0.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 16:04:26 +0000
+NotificationsChannel stopped streaming from notifications
+Started POST "/posts" for 127.0.0.1 at 2017-12-06 16:04:26 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a75ClenDBgUyBxbqAW1fz6qT3PYTBypdttaRqQ4w+fBQ5EQ8wh8kN2AFqYKZoxELD5CKw2stfFbAWUGp7Ikzww==", "post"=>{"title"=>"gyu", "author"=>"annoymous", "subject"=>"gyui"}, "commit"=>"Create Post"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "author", "subject", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "gyu"], ["author", "annoymous"], ["subject", "gyui"], ["user_id", 41], ["created_at", "2017-12-06 16:04:26.112602"], ["updated_at", "2017-12-06 16:04:26.112602"]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 51ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2017-12-06 16:04:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 11]]
+  Rendered collection of posts/_nested_comments.html.erb [0 times] (0.0ms)
+  Rendered posts/_comment.html.erb (2.2ms)
+  Rendered posts/show.html.erb within layouts/application (16.1ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.5ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (1.8ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 16:04:26 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 16:04:26 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Started GET "/posts" for 127.0.0.1 at 2017-12-06 16:04:28 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.7ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.4ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (2.1ms)
+Completed 200 OK in 102ms (Views: 99.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-12-06 16:05:38 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 8]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 9]]
+  Rendered collection of posts/_nested_comments.html.erb [0 times] (0.0ms)
+  Rendered collection of posts/_nested_comments.html.erb [1 times] (3.1ms)
+  Rendered collection of posts/_nested_comments.html.erb [1 times] (16.2ms)
+  Rendered posts/_comment.html.erb (1.2ms)
+  Rendered posts/show.html.erb within layouts/application (24.8ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.5ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (1.6ms)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-12-06 16:06:13 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.3ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.3ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  Rendered posts/show.html.erb within layouts/application (190.1ms)
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fffc707c6b8>:0x00007fb0f973b7a0>
+Did you mean?  @post):
+    16:   <%= @post.subject %>
+    17: </p>
+    18: <% if is_admin? || post.author == current_user.login %>
+    19:     <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    20:     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    21: <% end %>
+    22: 
+  
+app/views/posts/show.html.erb:19:in `_app_views_posts_show_html_erb___4461992614000088729_70199038060640'
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 16:06:38 +0000
+NotificationsChannel stopped streaming from notifications
+Started GET "/posts/1" for 127.0.0.1 at 2017-12-06 16:06:38 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  Rendered posts/show.html.erb within layouts/application (240.0ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fffc707c6b8>:0x00007fffc7c222b0>
+Did you mean?  @post):
+    17: </p>
+    18: 
+    19: <% if is_admin? || @post.author == current_user.login %>
+    20:     <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    21:     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    22: <% end %>
+    23: 
+  
+app/views/posts/show.html.erb:20:in `_app_views_posts_show_html_erb___4461992614000088729_70368272412020'
+Started GET "/posts/1" for 127.0.0.1 at 2017-12-06 16:06:45 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  [1m[36mCACHE Broadcast Load (0.0ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 11]]
+  Rendered posts/show.html.erb within layouts/application (202.5ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x00007fffc707c6b8>:0x00007fb0f9efce08>
+Did you mean?  @post):
+    18: 
+    19: <% if is_admin? || @post.author == current_user.login %>
+    20:     <td><%= link_to 'Edit', edit_post_path(@post) %></td>
+    21:     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    22: <% end %>
+    23: 
+    24: 
+  
+app/views/posts/show.html.erb:21:in `_app_views_posts_show_html_erb___4461992614000088729_70199042108440'
+Started GET "/posts/1" for 127.0.0.1 at 2017-12-06 16:06:51 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 8]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."comment_id" = ?[0m  [["comment_id", 9]]
+  Rendered collection of posts/_nested_comments.html.erb [0 times] (0.0ms)
+  Rendered collection of posts/_nested_comments.html.erb [1 times] (3.2ms)
+  Rendered collection of posts/_nested_comments.html.erb [1 times] (5.9ms)
+  Rendered posts/_comment.html.erb (1.2ms)
+  Rendered posts/show.html.erb within layouts/application (19.0ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.5ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (1.5ms)
+Completed 200 OK in 87ms (Views: 83.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-12-06 16:06:52 +0000
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-12-06 16:06:52 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+NotificationsChannel is transmitting the subscription confirmation
+NotificationsChannel is streaming from notifications
+Started GET "/posts" for 127.0.0.1 at 2017-12-06 16:06:54 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUserDetail Load (0.2ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  Rendered sessions/_login.html.erb (1.9ms)
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mCACHE UserDetail Load (0.0ms)[0m  [1m[34mSELECT  "user_details".* FROM "user_details" WHERE "user_details"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mBroadcast Load (0.2ms)[0m  [1m[34mSELECT  "broadcasts".* FROM "broadcasts" INNER JOIN "broadcasts_feeds" ON "broadcasts_feeds"."broadcast_id" = "broadcasts"."id" INNER JOIN "feeds" ON "feeds"."id" = "broadcasts_feeds"."feed_id" WHERE "feeds"."name" = ? ORDER BY "broadcasts"."created_at" DESC LIMIT ?[0m  [["name", "notification"], ["LIMIT", 20]]
+  Rendered notifications/_notifications.html.erb (1.8ms)
+Completed 200 OK in 80ms (Views: 76.6ms | ActiveRecord: 0.8ms)
+
+
