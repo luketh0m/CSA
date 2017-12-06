@@ -1,0 +1,6 @@
+<ul>
+<% # CSS AROUND HERE %>
+    <%= nested_comments.title %>
+    <%= render :partial => 'nested_comments', :collection => nested_comments.comments %>
+</ul>
+

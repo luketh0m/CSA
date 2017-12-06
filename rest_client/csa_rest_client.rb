@@ -33,6 +33,15 @@ class CSARestClient
         when '5'
           puts 'Deleting user:'
           delete_user
+        when '6'
+          puts 'Display posts:'
+          display_posts
+        when '7'
+          puts 'Displaying post:'
+          display_post
+        when '8'
+          puts 'Creating post:'
+          create_post
         when 'Q'
           break
         else
@@ -50,6 +59,9 @@ class CSARestClient
     puts '3. Create new user'
     puts '4. Update user by ID'
     puts '5. Delete user by ID'
+    puts '6. Display Posts'
+    puts '7. Display Posts by ID'
+    puts '8. Create post'
     puts 'Q. Quit'
   end
 
@@ -82,6 +94,40 @@ class CSARestClient
       js = JSON response.body
       js.each do |k, v|
         puts "#{k}: #{v}"
+      end
+    rescue => e
+      puts STDERR, "Error accessing REST service. Error: #{e}"
+    end
+  end
+
+  def display_post
+    begin
+      print "Enter the post ID: "
+      id = STDIN.gets.chomp
+      response = RestClient.get "#{@@DOMAIN}/api/posts/#{id}.json", authorization_hash
+
+      js = JSON response.body
+      js.each do |k, v|
+        puts "#{k}: #{v}"
+      end
+    rescue => e
+      puts STDERR, "Error accessing REST service. Error: #{e}"
+    end
+  end
+  def display_posts
+    begin
+      response = RestClient.get "#{@@DOMAIN}/api/posts.json?all", authorization_hash
+
+      puts "Response code: #{response.code}"
+      puts "Response cookies:\n #{response.cookies}\n\n"
+      puts "Response headers:\n #{response.headers}\n\n"
+      puts "Response content:\n #{response.to_str}"
+
+      js = JSON response.body
+      js.each do |item_hash|
+        item_hash.each do |k, v|
+          puts "#{k}: #{v}"
+        end
       end
     rescue => e
       puts STDERR, "Error accessing REST service. Error: #{e}"
@@ -147,6 +193,35 @@ class CSARestClient
       puts STDERR, "Error accessing REST service. Error: #{e}"
     end
   end
+
+
+
+  def create_post
+    begin
+      print "Ttile: "
+      title = STDIN.gets.chomp
+      print "Author: "
+      author = STDIN.gets.chomp
+      print "Subject: "
+      subject = STDIN.gets.chomp
+
+      response = RestClient.post "#{@@DOMAIN}/api/posts.json",
+                                 {
+                                     post: {title: title,
+                                            author: author,
+                                         subject: subject}
+                                 }, authorization_hash
+
+      if (response.code == 201)
+        puts "Created successfully"
+      end
+      puts "URL for new resource: #{response.headers[:location]}"
+    rescue => e
+      puts STDERR, "Error accessing REST service. Error: #{e}"
+    end
+  end
+
+
 
   def update_user
     begin

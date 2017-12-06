@@ -16,21 +16,20 @@
   <tbody>
     <% @posts.each do |post| %>
       <% if post.comment_id == nil %>
-        <tr>
+      <tr>
           <td><%= link_to post.title, post%></td>
           <td><%= post.author %></td>
           <td><%= post.subject %></td>
 
-          <td><%= link_to 'Show', post %></td>
           <% if is_admin? || post.author == current_user.login %>
             <td><%= link_to 'Edit', edit_post_path(post) %></td>
             <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>
-    </tbody>
-  </table>
+        <% end %>
      <% end %>
-  <% end %>
+     </tbody>
+     </table>
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Create Thread', new_post_path %>

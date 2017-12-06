@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api, defaults: {format: :json} do
+    resources :posts, except: [:new, :destroy, :edit] do
+      get 'search', on: :collection
+    end
+  end
   # No point allowing the editing or update of an existing broadcast
   resources :broadcasts, except: [:edit, :update]
 
